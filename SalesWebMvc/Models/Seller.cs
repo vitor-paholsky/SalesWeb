@@ -8,6 +8,8 @@ namespace SalesWebMvc.Models
     public class Seller
     {
         public int Id { get; set; }
+        [Required]
+        [StringLength(60, MinimumLength = 3)]
         public String Name { get; set; }
 
         [DataType(DataType.EmailAddress)]
